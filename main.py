@@ -4,7 +4,7 @@ from data import menu, resources
 profit = 0
 resources = {
     "water": 1300,
-    "milk": 1300,
+    "milk": 100,
     "coffee": 500,
 }
 
@@ -19,8 +19,8 @@ def resource_sufficient(ingredients):
                 print(f"{i.capitalize()} refilled")
             else:
                 exit()
-        else:
-            return True
+
+    return True
 
 
 def process_coins():
@@ -56,7 +56,7 @@ def make_coffee(user_coffee, ingredients):
 
 is_on = True
 while is_on:
-    user_coffee = input("What would you like? ").lower()
+    user_coffee = input("What would you like? (espresso/latte/cappuccino").lower()
     if user_coffee == "espresso" or user_coffee == "latte" or user_coffee == "cappuccino":
         drink = menu[user_coffee]
         # payment = money_received
