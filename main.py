@@ -53,6 +53,7 @@ def make_coffee(user_coffee, ingredients):
         resources[i] -= ingredients[i]
     print(f"And here is your {user_coffee}. Enjoy!")
 
+
 is_on = True
 while is_on:
     user_coffee = input("What would you like? ").lower()
