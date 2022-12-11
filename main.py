@@ -24,6 +24,7 @@ def resource_sufficient(ingredients):
 
 
 def process_coins():
+    """Returns the total calculated from coins inserted."""
     print("Please insert coins.")
     quarters = int(input("How many quarters?: ")) * 0.25
     dimes = int(input("How many dimes?: ")) * 0.10
@@ -34,6 +35,7 @@ def process_coins():
 
 
 def successful_transaction(money_received, cost_coffee):
+    """money_received = payment from line 65, cost_coffee == drink['cost']"""
     if money_received > cost_coffee:
         change_coffee = round(money_received - cost_coffee, 2)
         print(f"You've entered ${money_received}.")
@@ -48,7 +50,7 @@ def successful_transaction(money_received, cost_coffee):
 
 
 def make_coffee(user_coffee, ingredients):
-    # deduct the required ingredients from the resources
+    """deduct the required ingredients from the resources"""
     for i in ingredients:
         resources[i] -= ingredients[i]
     print(f"And here is your {user_coffee}. Enjoy!")
